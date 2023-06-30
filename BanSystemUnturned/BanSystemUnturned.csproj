@@ -8,28 +8,28 @@
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\Desktop\Unturned stuff\Rocket\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive\Рабочий стол\rocket\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="com.rlabrecque.steamworks.net">
-      <HintPath>..\..\..\..\Desktop\Unturned stuff\Rocket\com.rlabrecque.steamworks.net.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive\Рабочий стол\rocket\com.rlabrecque.steamworks.net.dll</HintPath>
     </Reference>
     <Reference Include="Rocket.API">
-      <HintPath>..\..\..\..\Desktop\Unturned stuff\Rocket\Rocket.API.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive\Рабочий стол\rocket\Rocket.API.dll</HintPath>
     </Reference>
     <Reference Include="Rocket.Core">
-      <HintPath>..\..\..\..\Desktop\Unturned stuff\Rocket\Rocket.Core.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive\Рабочий стол\rocket\Rocket.Core.dll</HintPath>
     </Reference>
     <Reference Include="Rocket.Unturned">
-      <HintPath>..\..\..\..\Desktop\Unturned stuff\Rocket\Rocket.Unturned.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive\Рабочий стол\rocket\Rocket.Unturned.dll</HintPath>
     </Reference>
     <Reference Include="SDG.NetTransport">
-      <HintPath>..\..\..\..\Desktop\Unturned stuff\Rocket\SDG.NetTransport.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive\Рабочий стол\rocket\SDG.NetTransport.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\Desktop\Unturned stuff\Rocket\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive\Рабочий стол\rocket\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\Desktop\Unturned stuff\Rocket\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive\Рабочий стол\rocket\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
 

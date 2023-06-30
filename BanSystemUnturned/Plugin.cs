@@ -1,9 +1,6 @@
 ﻿using Rocket.API.Collections;
 using Rocket.Core.Logging;
 using Rocket.Core.Plugins;
-using SDG.Unturned;
-using System;
-using System.Collections.Generic;
 
 namespace BanSystemUnturned {
     public class Plugin : RocketPlugin<Config> {

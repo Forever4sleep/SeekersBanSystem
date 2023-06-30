@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\abein\\source\\repos\\BanSystemUnturned\\BanSystemUnturned\\BanSystemUnturned.csproj",
+      "projectUniqueName": "C:\\Users\\abein\\Source\\Repos\\SeekersBanSystem\\BanSystemUnturned\\BanSystemUnturned.csproj",
       "projectName": "BanSystemUnturned",
-      "projectPath": "C:\\Users\\abein\\source\\repos\\BanSystemUnturned\\BanSystemUnturned\\BanSystemUnturned.csproj",
+      "projectPath": "C:\\Users\\abein\\Source\\Repos\\SeekersBanSystem\\BanSystemUnturned\\BanSystemUnturned.csproj",
       "packagesPath": "C:\\Users\\abein\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\abein\\source\\repos\\BanSystemUnturned\\BanSystemUnturned\\obj\\",
+      "outputPath": "C:\\Users\\abein\\Source\\Repos\\SeekersBanSystem\\BanSystemUnturned\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\abein\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,7 +45,7 @@
     "frameworks": {
       "net48": {
         "targetAlias": "net48",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
