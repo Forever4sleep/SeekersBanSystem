@@ -8,14 +8,14 @@ namespace BanSystemUnturned {
         [XmlAttribute] public ulong playerId;
         [XmlAttribute] public DateTime banDate;
         public string reason;
-        [XmlAttribute] public uint banTime;
+        [XmlAttribute] public ulong banTime;
         [XmlAttribute] public ulong bannedBy;
         [XmlAttribute] public string bannedByName;
         [XmlAttribute] public byte numberOfMessages;
 
         public BannedPlayer() { }
 
-        public BannedPlayer(ulong playerId, DateTime banDate, uint banTime, ulong bannedBy, string reason, string bannedByName, byte numberOfMessages) {
+        public BannedPlayer(ulong playerId, DateTime banDate, ulong banTime, ulong bannedBy, string reason, string bannedByName, byte numberOfMessages) {
             this.playerId = playerId;
             this.banDate = banDate;
             this.banTime = banTime;

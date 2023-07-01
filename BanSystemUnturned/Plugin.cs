@@ -59,15 +59,14 @@ namespace BanSystemUnturned {
             BannedPlayer data = Configuration.Instance.BannedPlayers.FirstOrDefault(x => x.playerId == ((ulong)victim.CSteamID));
             if (data == null) return;
             bannedPlayersOnTheServer.Add(victim.Player, string.Empty);
-            if ((uint)(data.banDate.Second - data.banTime) >= data.banTime) {
+            if ((ulong)(DateTime.Now - data.banDate).Seconds >= data.banTime) {
                 Configuration.Instance.BannedPlayers.Remove(data);
                 return;
             }
-            data.banTime = (uint)(data.banDate.Second - data.banTime);
 
-            uint days = data.banTime / 86400;
-            uint hours = (data.banTime % 86400) / 3600;
-            uint minutes = (data.banTime % 3600) / 60;
+            ulong days = data.banTime / 86400;
+            ulong hours = (data.banTime % 86400) / 3600;
+            ulong minutes = (data.banTime % 3600) / 60;
             victim.Player.setPluginWidgetFlag(EPluginWidgetFlags.Modal, true);
             EffectManager.sendUIEffect(14883, 1, true);
             EffectManager.sendUIEffectText(1, victim.CSteamID, true, "CallerName", data.bannedByName);

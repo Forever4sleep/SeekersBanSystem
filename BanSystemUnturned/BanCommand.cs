@@ -33,12 +33,12 @@ namespace BanSystemUnturned {
             UnturnedChat.Say(player, message, Color.cyan);
         }
 
-        public void AddToBanList(CSteamID playerId, UnturnedPlayer caller, uint banTime, string reason, DateTime time) {
+        public void AddToBanList(CSteamID playerId, UnturnedPlayer caller, ulong banTime, string reason, DateTime time) {
             Plugin.Instance.Configuration.Instance.BannedPlayers.Add(
                 new BannedPlayer((ulong)playerId, time, banTime, (ulong)caller.CSteamID, reason, caller.CharacterName, 0));
             Plugin.Instance.Configuration.Save();
         }
-        public void TryBanPlayer(UnturnedPlayer caller, UnturnedPlayer victim, string reason, uint time) {
+        public void TryBanPlayer(UnturnedPlayer caller, UnturnedPlayer victim, string reason, ulong time) {
             bool victimIsStaff = Plugin.Instance.Configuration.Instance.
                 StaffPlayers.Exists(pl => pl.playerId == ((ulong)victim.CSteamID));
 
@@ -51,9 +51,9 @@ namespace BanSystemUnturned {
             AddToBanList(victim.CSteamID, caller, time, reason, date);
 
 
-            uint days = time / 86400;
-            uint hours = (time % 86400) / 3600;
-            uint minutes = (time % 3600) / 60;
+            ulong days = time / 86400;
+            ulong hours = (time % 86400) / 3600;
+            ulong minutes = (time % 3600) / 60;
 
             victim.Player.setPluginWidgetFlag(EPluginWidgetFlags.Modal, true);
             EffectManager.sendUIEffect(14883, 1, true);
