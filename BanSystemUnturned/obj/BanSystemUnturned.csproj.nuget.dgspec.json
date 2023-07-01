@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abein\\Source\\Repos\\SeekersBanSystem\\BanSystemUnturned\\BanSystemUnturned.csproj": {}
+    "C:\\Users\\abein\\source\\repos\\SeekersBanSystem\\BanSystemUnturned\\BanSystemUnturned.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abein\\Source\\Repos\\SeekersBanSystem\\BanSystemUnturned\\BanSystemUnturned.csproj": {
+    "C:\\Users\\abein\\source\\repos\\SeekersBanSystem\\BanSystemUnturned\\BanSystemUnturned.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abein\\Source\\Repos\\SeekersBanSystem\\BanSystemUnturned\\BanSystemUnturned.csproj",
+        "projectUniqueName": "C:\\Users\\abein\\source\\repos\\SeekersBanSystem\\BanSystemUnturned\\BanSystemUnturned.csproj",
         "projectName": "BanSystemUnturned",
-        "projectPath": "C:\\Users\\abein\\Source\\Repos\\SeekersBanSystem\\BanSystemUnturned\\BanSystemUnturned.csproj",
+        "projectPath": "C:\\Users\\abein\\source\\repos\\SeekersBanSystem\\BanSystemUnturned\\BanSystemUnturned.csproj",
         "packagesPath": "C:\\Users\\abein\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abein\\Source\\Repos\\SeekersBanSystem\\BanSystemUnturned\\obj\\",
+        "outputPath": "C:\\Users\\abein\\source\\repos\\SeekersBanSystem\\BanSystemUnturned\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abein\\AppData\\Roaming\\NuGet\\NuGet.Config",

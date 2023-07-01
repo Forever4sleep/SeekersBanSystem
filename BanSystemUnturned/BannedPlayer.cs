@@ -10,15 +10,19 @@ namespace BanSystemUnturned {
         public string reason;
         [XmlAttribute] public uint banTime;
         [XmlAttribute] public ulong bannedBy;
+        [XmlAttribute] public string bannedByName;
+        [XmlAttribute] public byte numberOfMessages;
 
         public BannedPlayer() { }
 
-        public BannedPlayer(ulong playerId, DateTime banDate, uint banTime, ulong bannedBy, string reason) {
+        public BannedPlayer(ulong playerId, DateTime banDate, uint banTime, ulong bannedBy, string reason, string bannedByName, byte numberOfMessages) {
             this.playerId = playerId;
             this.banDate = banDate;
             this.banTime = banTime;
             this.bannedBy = bannedBy;
             this.reason = reason;
+            this.bannedByName = bannedByName;
+            this.numberOfMessages = numberOfMessages;
         }
     }
 }

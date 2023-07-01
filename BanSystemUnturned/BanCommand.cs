@@ -33,9 +33,9 @@ namespace BanSystemUnturned {
             UnturnedChat.Say(player, message, Color.cyan);
         }
 
-        public void AddToBanList(CSteamID playerId, CSteamID caller, uint banTime, string reason, DateTime time) {
+        public void AddToBanList(CSteamID playerId, UnturnedPlayer caller, uint banTime, string reason, DateTime time) {
             Plugin.Instance.Configuration.Instance.BannedPlayers.Add(
-                new BannedPlayer((ulong)playerId, time, banTime, (ulong)caller, reason));
+                new BannedPlayer((ulong)playerId, time, banTime, (ulong)caller.CSteamID, reason, caller.CharacterName, 0));
             Plugin.Instance.Configuration.Save();
         }
         public void TryBanPlayer(UnturnedPlayer caller, UnturnedPlayer victim, string reason, uint time) {
@@ -48,19 +48,19 @@ namespace BanSystemUnturned {
             }
 
             DateTime date = DateTime.Now;
-            AddToBanList(victim.CSteamID, caller.CSteamID, time, reason, date);
+            AddToBanList(victim.CSteamID, caller, time, reason, date);
 
 
             uint days = time / 86400;
-            uint minutes = (time % 86400) / 3600;
+            uint hours = (time % 86400) / 3600;
+            uint minutes = (time % 3600) / 60;
 
             victim.Player.setPluginWidgetFlag(EPluginWidgetFlags.Modal, true);
             EffectManager.sendUIEffect(14883, 1, true);
             EffectManager.sendUIEffectText(1, victim.CSteamID, true, "CallerName", caller.CharacterName);
             EffectManager.sendUIEffectText(1, victim.CSteamID, true, "Reason", reason);
-            EffectManager.sendUIEffectText(1, victim.CSteamID, true, "BanTime", $"{days}d {minutes}m");
-            EffectManager.sendUIEffectImageURL(1, victim.CSteamID, true, "CallerAvatar", caller.SteamProfile.AvatarIcon.AbsolutePath);
-            //victim.Kick(Plugin.Instance.Translations.Instance.Translate("banned", caller.DisplayName, reason));
+            EffectManager.sendUIEffectText(1, victim.CSteamID, true, "BanTime", $"{days}d {hours}h {minutes}m");
+            EffectManager.sendUIEffectImageURL(1, victim.CSteamID, true, "CallerAvatar", caller.SteamProfile.AvatarFull.ToString());
         }
 
         public void Execute(IRocketPlayer caller, string[] command) {
@@ -89,6 +89,10 @@ namespace BanSystemUnturned {
                     if (!parsed) {
                         SayToPlayerTranslation(player, "valid_time");
                         return;
+                    }
+                    if (Plugin.Instance.Configuration.Instance.BannedPlayers.Exists(x => x.playerId == ((ulong)victim.CSteamID))) {
+                        SayToPlayerTranslation(player, "already_banned");
+                        return; 
                     }
                     TryBanPlayer(player, victim, command[2], time);
                     break;
